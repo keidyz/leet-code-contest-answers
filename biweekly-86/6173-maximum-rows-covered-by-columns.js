@@ -13,6 +13,26 @@
 // 0 1 1
 // col = 2
 
+// goal
+// - Basically, you want to try and "cover" as much rows as you can
+// - to "cover" a row, you need to have all the 1s in the row within the column you've selected
+
+// ex:
+// mat = [[1,0,1], [1,1,0]]
+// col = 2 which means you can select 2 columns
+// to cover mat[0], you'd need to select columns 0 and 2
+// to cover mat[1], you'd need to select columns 0 and 1
+// because you can only select two columns, you won't be able to cover mat[0] and mat[1]
+// but you can cover 1 of them so the answer is 1
+
+// ex
+// mat = [[1,0,1], [0,0,1], [1,0,0], [1,0,0]]
+// col = 1 which means you can only select 1 column
+// possible columns [0,0,1], [0,1,0], [1,0,0]
+// [0,0,1] will result in mat[1] being covered so count is 1
+// [0,1,0] will result in 0 rows covered so count is 0
+// [1,0,0] will result in mat[2] and mat[3] being covered so count is 2
+// best count seen is 2 so answer is 2
 
 // DP idea
 // - generate possible column variations
