@@ -14,7 +14,7 @@
 // col = 2
 
 
-// idea
+// DP idea
 // - generate possible column variations
 //  - [b,a,a] representing [0,1,1] with row[1] and row[2] as the two chosen columns
 //  - generated columns -> [a,a,b], [a,b,a], [b,a,a]
