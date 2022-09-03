@@ -36,7 +36,7 @@ var maximumRows = function(mat, cols) {
             return
         }
         if(count < cols) {
-            backtrack([...colsDp, 'a'], count+1)
+            generate([...colsDp, 'a'], count+1)
         }
         generate([...colsDp, 'b'], count)
     }
