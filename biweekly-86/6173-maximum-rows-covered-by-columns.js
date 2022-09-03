@@ -27,7 +27,7 @@
 
 var maximumRows = function(mat, cols) {
     const res = []
-    const backtrack = (colsDp = [], count = 0) => {
+    const generate = (colsDp = [], count = 0) => {
         if(colsDp.length === mat[0].length && count === cols) {
             res.push(colsDp)
             return
@@ -38,9 +38,9 @@ var maximumRows = function(mat, cols) {
         if(count < cols) {
             backtrack([...colsDp, 'a'], count+1)
         }
-        backtrack([...colsDp, 'b'], count)
+        generate([...colsDp, 'b'], count)
     }
-    backtrack()
+    generate()
     let best = -Infinity
     for(const r of res) {
         let currCount = 0
